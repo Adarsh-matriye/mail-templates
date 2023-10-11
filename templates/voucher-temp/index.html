@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voucher layout</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      :root {
+        --white: white;
+        --primary-blue: #002470;
+        --secondary-color: #cbefff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gabarito", cursive;
+        font-family: "Montserrat", sans-serif;
+      }
+      .header-container {
+        background-color: var(--primary-blue);
+      }
+
+      .header-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+      }
+
+      .header-wrapper > h1 {
+        color: var(--white);
+        font-size: 4.5rem;
+        font-family: 800;
+      }
+
+      .header-wrapper .logo {
+        width: 200px;
+        height: 100px;
+      }
+
+      .header-wrapper .logo > img {
+        width: 100%;
+        background-size: cover;
+      }
+
+      .main-section-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 0;
+      }
+
+      .date {
+        margin-top: 35px;
+        margin-bottom: 45px;
+        font-size: 1rem;
+        color: var(--primary-blue);
+        font-weight: 500;
+      }
+
+      .info-block {
+        display: flex;
+        gap: 100px;
+      }
+
+      .info-block-text {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 10px;
+      }
+
+      .label {
+        color: var(--primary-blue);
+        font-size: 1rem;
+        font-weight: 700;
+        width: 200px;
+      }
+
+      .details {
+        width: 300px;
+        line-height: 22px;
+        font-size: 1rem;
+        color: var(--primary-blue);
+        font-weight: 500;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+        margin-top: 60px;
+      }
+
+      table thead {
+        background-color: var(--primary-blue);
+      }
+
+      table tbody tr:not(:last-of-type) {
+        background-color: var(--secondary-color);
+      }
+
+      td,
+      th {
+        padding: 25px 60px;
+      }
+
+      th {
+        color: var(--white);
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      th:not(:first-of-type) {
+        text-align: right;
+      }
+
+      td {
+        text-align: right;
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      td:nth-of-type(1) {
+        text-align: left;
+      }
+
+      .total-amount {
+        font-weight: 800;
+      }
+
+      .tnc {
+        background-color: var(--primary-blue);
+        margin: 50px 0 25px 0;
+      }
+
+      .tnc > p {
+        color: var(--white);
+        padding: 40px 20px 20px 30px;
+      }
+
+      .tnc ul {
+        padding: 0 30px 40px 40px;
+      }
+
+      .tnc ul li {
+        color: var(--white);
+        line-height: 25px;
+        font-size: 1rem;
+      }
+
+      .footer-container {
+        background-color: var(--primary-blue);
+      }
+
+      .footer-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 45px 0;
+      }
+
+      .footer-wrapper > p {
+        color: var(--white);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-wrapper">
+        <h1 class="heading">Voucher</h1>
+        <div class="logo">
+          <img src="./assests/logo.png" alt="logo" />
+        </div>
+      </div>
+    </header>
+    <div class="main-section">
+      <div class="main-section-wrapper">
+        <p class="date"><span class="label">Date:</span> 09/09/2009</p>
+        <div class="info-block">
+          <div class="left-side">
+            <div class="info-block-text">
+              <p class="label">Company Name:</p>
+              <p class="details">Matriye Academy LLP</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Registered Office:</p>
+              <p class="details">
+                Office no. 708, Finswell, Sakore Nagar, Viman Nagar,Pune 411014,
+                Maharashtra
+              </p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Corporate Office:</p>
+              <p class="details">
+                Office no. 708, Finswell, Sakore Nagar, Viman Nagar,Pune 411014,
+                Maharashtra
+              </p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Work Email:</p>
+              <p class="details">support@matriyeacademy.com</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Work Landline No:</p>
+              <p class="details">0987654321</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">GST No:</p>
+              <p class="details">GSTIN83929101223</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">PAN No:</p>
+              <p class="details">ADA220021223</p>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="info-block-text">
+              <p class="label">Instructor ID:</p>
+              <p class="details">MAT232233</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Instructor Name:</p>
+              <p class="details">AtulNaik</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Address:</p>
+              <p class="details">
+                SakorNagar,VimanNagar,Pune-411014, Maharashtra
+              </p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Email:</p>
+              <p class="details">support@matriyeacademy.com</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Registered Mobile:</p>
+              <p class="details">0987654321</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Course Name:</p>
+              <p class="details">Science</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Course Duration:</p>
+              <p class="details">23 Days</p>
+            </div>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2" style="width: 50%">Sr. No.</th>
+              <th style="width: 25%">Course Name</th>
+              <th style="width: 25%">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">1</td>
+              <td>Science</td>
+              <td>2344.00</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td>TDS</td>
+              <td>22.00</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td class="total-amount">Grand Total</td>
+              <td class="total-amount">332123.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tnc">
+          <p>Terms & Conditions</p>
+          <ul>
+            <li>
+              Registration will only be confirmed upon receipt of full payment
+              of course fee.
+            </li>
+            <li>
+              By paying for the course, you accept that you have read and agree
+              with all the terms and conditions mentioned on our website
+              www.matriyeacademy.com.
+            </li>
+            <li>
+              Course fees are non-refundable and non-transferable from one
+              course to another.
+            </li>
+            <li>
+              For any dispute/complaints, legal judiciary will be Mumbai High
+              Court.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="footer-wrapper">
+        <p>
+          Note: This is computer generated Invoice and doesn't require any
+          signature.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
