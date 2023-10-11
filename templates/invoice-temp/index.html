@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      :root {
+        --white: white;
+        --primary-blue: #002470;
+        --secondary-color: #cbefff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gabarito", cursive;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .header-container {
+        background-color: var(--primary-blue);
+      }
+
+      .header-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+      }
+
+      .header-wrapper > h1 {
+        color: var(--white);
+        font-size: 4.5rem;
+        font-family: 800;
+      }
+
+      .header-wrapper .logo {
+        width: 200px;
+        height: 100px;
+      }
+
+      .header-wrapper .logo > img {
+        width: 100%;
+        background-size: cover;
+      }
+
+      .main-section-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 0;
+      }
+
+      .info-block {
+        margin-top: 50px;
+        display: flex;
+        gap: 100px;
+      }
+
+      .info-block-text {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 10px;
+      }
+
+      .label {
+        color: var(--primary-blue);
+        font-size: 1rem;
+        font-weight: 800;
+        width: 200px;
+      }
+
+      .details {
+        width: 300px;
+        line-height: 22px;
+        font-size: 1rem;
+        color: var(--primary-blue);
+        font-weight: 500;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 60px;
+      }
+
+      table thead {
+        background-color: var(--primary-blue);
+      }
+
+      table tbody tr:nth-of-type(even) {
+        background-color: var(--secondary-color);
+      }
+
+      td,
+      th {
+        padding: 25px 60px;
+      }
+
+      th {
+        color: var(--white);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      td {
+        text-align: center;
+        color: var(--primary-blue);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .total-amount {
+        font-weight: 700;
+      }
+
+      .bill-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 40px;
+      }
+
+      .tnc {
+        flex: 3;
+      }
+
+      .amount-breakdown {
+        flex: 1;
+      }
+
+      .invoice-block-text {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+
+      .invoice-label {
+        color: var(--primary-blue);
+        font-size: 1rem;
+        font-weight: 700;
+        width: 170px;
+        line-height: 25px;
+      }
+
+      .invoice-details {
+        color: var(--primary-blue);
+        font-size: 1rem;
+        font-weight: 700;
+        width: 130px;
+        line-height: 25px;
+      }
+
+      .invoice-total-text {
+        margin-top: 30px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--primary-blue);
+      }
+
+      .invoice-total-label,
+      .invoice-total-details {
+        color: var(--white);
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 10px 0;
+      }
+
+      .invoice-total-text {
+        padding: 4px 90px 4px 10px;
+      }
+
+      .tnc > p {
+        color: var(--primary-blue);
+        padding-bottom: 15px;
+        font-weight: 800;
+      }
+
+      .tnc > ol {
+        margin-left: 17px;
+      }
+
+      .tnc > ol > li {
+        line-height: 25px;
+        color: var(--primary-blue);
+        font-weight: 500;
+      }
+
+      .footer-container {
+        background-color: var(--primary-blue);
+      }
+
+      .footer-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-wrapper > h5 {
+        color: var(--white);
+        font-size: 1.3rem;
+      }
+
+      .footer-wrapper > p {
+        color: var(--white);
+        font-size: 0.9rem;
+      }
+    </style>
+    <title>Invoice</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-wrapper">
+        <h1 class="heading">Tax Invoice</h1>
+        <div class="logo">
+          <img src="./assests/logo.png" alt="logo" />
+        </div>
+      </div>
+    </header>
+    <div class="main-section">
+      <div class="main-section-wrapper">
+        <div class="info-block">
+          <div class="left-side">
+            <div class="info-block-text">
+              <p class="label">Email Id:</p>
+              <p class="details">sales@matriyeacademy.com</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Invoice No:</p>
+              <p class="details">000012345678900</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Contact Person:</p>
+              <p class="details">MATRIYE ACADEMY</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Bill:</p>
+              <p class="details">MATRIYE ACADEMY LLP</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Contact Person:</p>
+              <p class="details">0000 12345 678900</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Company Name:</p>
+              <p class="details">Matriye Academy LLP</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Address:</p>
+              <p class="details">
+                Office no. 708, Finswell, Sakore Nagar, Viman Nagar,Pune 411014,
+                Maharashtra
+              </p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">GST No:</p>
+              <p class="details">JJD822929292</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">CIN No:</p>
+              <p class="details">SHD2344555</p>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="info-block-text">
+              <p class="label">Date:</p>
+              <p class="details">05/04/2028</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Email ID:</p>
+              <p class="details">student@gmail.com</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Contact Person:</p>
+              <p class="details">Adarsh Singh</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Transaction ID:</p>
+              <p class="details">1223548990023232</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Payment Gateway:</p>
+              <p class="details">NET BANKING</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Address:</p>
+              <p class="details">Y-2, CityRoad, City-243134</p>
+            </div>
+            <div class="info-block-text">
+              <p class="label">Contact No:</p>
+              <p class="details">0987654321</p>
+            </div>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Item Description</th>
+              <th>Unit Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td class="total-amount">$15</td>
+              <td class="total-amount">6</td>
+              <td class="total-amount">$90</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bill-info">
+          <div class="tnc">
+            <p>Terms & Conditions</p>
+            <ol>
+              <li>Subject to Pune jurisdiction</li>
+              <li>100% Payment</li>
+              <li>
+                Once a purchase has been made, the customer cannot return <br />
+                the item and seek a refund or replacement.
+              </li>
+            </ol>
+          </div>
+          <div class="amount-breakdown">
+            <div class="invoice-block-text">
+              <p class="invoice-label">Sub Total:</p>
+              <p class="invoice-details">$226.00</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">Discount:</p>
+              <p class="invoice-details">0.00%</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">Sub Total Less Discount:</p>
+              <p class="invoice-details">226.00</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">CGST</p>
+              <p class="invoice-details">0.00%</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">IGST:</p>
+              <p class="invoice-details">0.00%</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">SGST:</p>
+              <p class="invoice-details">0.00%</p>
+            </div>
+            <div class="invoice-block-text">
+              <p class="invoice-label">Balance Due:</p>
+              <p class="invoice-details">$226.00</p>
+            </div>
+            <div class="invoice-total-text">
+              <p class="invoice-total-label">Total:</p>
+              <p class="invoice-total-details">$226.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="footer-wrapper">
+        <h5>Thank you for your Business</h5>
+        <p>
+          Office No. 708, LMS Finswell, Sakore Nagar,<br />
+          Pune City, Maharashtra 411014
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
