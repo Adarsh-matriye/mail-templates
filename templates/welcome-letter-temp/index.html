@@ -3,8 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      :root {
+        --white: white;
+        --primary-blue: #1459d0;
+        --secondary-color: #f1f5ff;
+        --border-color: #1459ce;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gabarito", cursive;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+      }
+
+      a {
+        color: var(--primary-blue);
+        font-weight: 600;
+      }
+
+      .header-container {
+        background-color: var(--primary-blue);
+      }
+
+      .header-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0;
+        color: var(--white);
+      }
+
+      .main-section-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 0;
+      }
+
+      .main-section-wrapper h2 {
+        color: var(--primary-blue);
+        font-size: 1.2rem;
+        margin: 20px 0;
+        font-weight: 600;
+      }
+
+      .main-section-wrapper h2 > span {
+        color: black;
+      }
+
+      .main-section-wrapper .two-color-block-wrapper {
+        width: 40%;
+        margin: 40px 0;
+      }
+
+      .main-section-wrapper .two-color-block {
+        border: 1.9px solid var(--border-color);
+        margin-bottom: 5px;
+        display: flex;
+      }
+
+      .main-section-wrapper .two-color-block p:first-child {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        flex: 1;
+        padding: 10px 15px;
+      }
+
+      .main-section-wrapper .two-color-block p:last-child {
+        flex: 1;
+        padding: 10px 15px;
+      }
+
+      .main-section-wrapper .two-color-block > p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+
+      .bold-text {
+        font-weight: 700;
+      }
+
+      .message {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      .signature-cotainer {
+        display: flex;
+        align-items: center;
+      }
+
+      .signature-cotainer .signature {
+        width: 200px;
+        height: 60px;
+      }
+
+      .signature,
+      .stamp {
+        display: flex;
+      }
+
+      .signature-cotainer img {
+        width: 100%;
+      }
+
+      .signature-cotainer .stamp {
+        width: 120px;
+        height: 120px;
+      }
+
+      .social-links-container {
+        margin-top: 40px;
+        background-color: var(--secondary-color);
+      }
+
+      .social-links-container .social-links-wrapper {
+        width: 60%;
+        margin: 0 auto;
+        padding: 35px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-links-container .social-links-wrapper > p {
+        width: max-content;
+        font-size: 0.8rem;
+      }
+
+      .social-icons-grp {
+        display: flex;
+        width: max-content;
+        margin-bottom: 15px;
+      }
+
+      .social-icons-grp .social-icon {
+        margin: 0 15px;
+      }
+
+      .social-icons-grp .social-icon img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .footer-container {
+        background-color: var(--primary-blue);
+      }
+
+      .footer-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 45px 0;
+      }
+
+      .footer-wrapper > p {
+        color: var(--white);
+        font-size: 0.7rem;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+      }
+    </style>
     <title>Welcome letter</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header-container">
+      <div class="header-wrapper">Welcome letter</div>
+    </header>
+    <div class="main-section">
+      <div class="main-section-wrapper">
+        <h2>Dear Riyaz Sayyed, <span>Welcome to Matriye Academy!</span></h2>
+        <p>
+          You have created your account on Matriye Academy portal. Your account
+          credentials are as follows:
+        </p>
+        <div class="two-color-block-wrapper">
+          <div class="two-color-block">
+            <p>User ID</p>
+            <p>riyaz@gmail.com</p>
+          </div>
+          <div class="two-color-block">
+            <p>Password</p>
+            <p>23455323drr@</p>
+          </div>
+          <div class="two-color-block">
+            <p>Registered mobile number</p>
+            <p>7972058361</p>
+          </div>
+        </div>
+        <p class="message">
+          You may now login with the above credentials to access the features of
+          Matriye Academy.You can change/reset your password anytime by
+          accessing the menu from the user home screen.<br /><br />In case of
+          any doubt or need of further assistance, please write to us at
+          <a href="">support@matriyeacademy.com</a>
+        </p>
+        <div class="signature-cotainer">
+          <div class="signature">
+            <img src="../../assests/Sanjeev Kumar Signature.png" alt="" />
+          </div>
+          <div class="stamp">
+            <img src="../../assests/stamp.jpg" alt="" />
+          </div>
+        </div>
+        <p class="regards">
+          <span class="bold-text">Kumar Sanjeev</span><br />CEO & Co-Founder
+        </p>
+      </div>
+    </div>
+    <div class="social-links-container">
+      <div class="social-links-wrapper">
+        <div class="social-icons-grp">
+          <div class="social-icon">
+            <img src="../../assests/facebook.png" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="../../assests/linkedin.png" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="../../assests/twitter.png" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="../../assests/instagram.png" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="../../assests/youtube.png" alt="" />
+          </div>
+        </div>
+        <p>www.matriyeacademy.com/support@matriyeacademy.com</p>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="footer-wrapper">
+        <p>
+          Disclaimer - Terms and conditions apply. the information and material
+          presented in this e-mail are provided to you for informational
+          purposes only and are not to be used for considered as an offer or a
+          solicitation for your borrowing. Neither Spring Review nor any of its
+          affiliates makes any representation or warranty or gurantee as to the
+          completeness, accuracy, timeliness or suitability of any information
+          contained within any part of the report nor that is free from error.
+          Matriye Academy does not accept any liability for any loss or damage
+          (including, without limitation, loss of profit), which may arise
+          directly or indirectly from use of or reliance on such information.
+          the values quoted are indicative only and are subject to change.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
